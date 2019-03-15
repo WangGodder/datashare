@@ -1,0 +1,11 @@
+#bootstrap.yml（bootstrap.properties）用来程序引导时执行，应用于更加早期配置信息读取
+#一个父级的 Spring ApplicationContext 加载的。这个父级的Spring ApplicationContext是先加载的，
+#在加载application.yml 的 ApplicationContext之前加载,具有类似于全局配置的功能
+
+spring:
+  profiles: default
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8800/eureka/
+
