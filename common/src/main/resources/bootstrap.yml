@@ -1,11 +1,26 @@
-#bootstrap.yml£¨bootstrap.properties£©ÓÃÀ´³ÌĞòÒıµ¼Ê±Ö´ĞĞ£¬Ó¦ÓÃÓÚ¸ü¼ÓÔçÆÚÅäÖÃĞÅÏ¢¶ÁÈ¡
-#Ò»¸ö¸¸¼¶µÄ Spring ApplicationContext ¼ÓÔØµÄ¡£Õâ¸ö¸¸¼¶µÄSpring ApplicationContextÊÇÏÈ¼ÓÔØµÄ£¬
-#ÔÚ¼ÓÔØapplication.yml µÄ ApplicationContextÖ®Ç°¼ÓÔØ,¾ßÓĞÀàËÆÓÚÈ«¾ÖÅäÖÃµÄ¹¦ÄÜ
+#bootstrap.ymlï¼ˆbootstrap.propertiesï¼‰ç”¨æ¥ç¨‹åºå¼•å¯¼æ—¶æ‰§è¡Œï¼Œåº”ç”¨äºæ›´åŠ æ—©æœŸé…ç½®ä¿¡æ¯è¯»å–
+#ä¸€ä¸ªçˆ¶çº§çš„ Spring ApplicationContext åŠ è½½çš„ã€‚è¿™ä¸ªçˆ¶çº§çš„Spring ApplicationContextæ˜¯å…ˆåŠ è½½çš„ï¼Œ
+#åœ¨åŠ è½½application.yml çš„ ApplicationContextä¹‹å‰åŠ è½½,å…·æœ‰ç±»ä¼¼äºå…¨å±€é…ç½®çš„åŠŸèƒ½
 
-spring:
-  profiles: default
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8800/eureka/
 
+
+#----------------------------------------------------------------------------
+# é…ç½®å‚æ•°
+properties:
+  database:
+    user:
+      url: 127.0.0.1
+      port: 3306
+      database-name: share_user
+      username: root
+      password: 970701wxz
+    data-service:
+      url: 127.0.0.1
+      port: 3306
+      database-name: share_data
+      username: root
+      password: 970701wxz

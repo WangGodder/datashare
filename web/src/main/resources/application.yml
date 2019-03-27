@@ -1,0 +1,13 @@
+server:
+  port: 8880
+spring:
+  application:
+    name: web
+  thymeleaf:
+    prefix: classpath:templates/
+    cache: false
+    check-template-location: true
+    content-type: text/html; charset=UTF-8
+    suffix: .html
+  resources:
+    static-locations: classpath:static/

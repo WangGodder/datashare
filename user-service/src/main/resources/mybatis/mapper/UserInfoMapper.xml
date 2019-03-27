@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.godder.userservice.mapper.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="top.godder.dataapi.entry.UserInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="provinceId" jdbcType="INTEGER" property="provinceId" />
+    <result column="cityId" jdbcType="INTEGER" property="cityId" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="major" jdbcType="VARCHAR" property="major" />
+    <result column="introduce" jdbcType="VARCHAR" property="introduce" />
+  </resultMap>
+  <select id="findUserInfoById" parameterType="java.lang.Long" resultType="UserInfo">
+    select * from user_info where id = #{id}
+  </select>
+  <select id="findAllUserInfo" resultType="UserInfo">
+    select * from user_info;
+  </select>
+  <select id="findUserInfoByReq" parameterType="top.godder.dataapi.request.UserInfoReq" resultType="UserInfo">
+    select * from user_info
+    <where>
+      <if test="company != null and company != ''">
+        and company = #{company}
+      </if>
+      <if test="provinceId != null">
+        and province_id = #{provinceId}
+      </if>
+      <if test="cityId != null">
+        and city_id = #{cityId}
+      </if>
+      <if test="gender != null and gender != ''">
+        and gender = #{gender}
+      </if>
+      <if test="beginAge != null">
+        and #{beginAge} &lt;= age
+      </if>
+      <if test="endAge != null">
+        and age &lt;= #{endAge}
+      </if>
+      <if test="major != null and major != ''">
+        and major = #{major}
+      </if>
+    </where>
+  </select>
+  <insert id="addUserInfo" parameterType="UserInfo">
+    insert into
+    user_info (
+               user_id, company, province_id, city_id, gender, age, major, introduce
+            )
+    values(
+           #{user_id, jdbcType=BIGINT}, #{company, jdbcType=VARCHAR},
+           #{provinceId, jdbcType=INT}, #{cityId, jdbcType=INT},
+           #{gender, jdbcType=VARCHAR}, #{age, jdbcType=INT},
+           #{major, jdbcType=VARCHAR}, #{introduce, jdbcType=VARCHAR}
+                  )
+  </insert>
+  <update id="updateUserInfo" parameterType="UserInfo">
+    update user_info
+    set company = #{company, jdbcType=VARCHAR}, province_id = #{provinceId, jdbcType=INT},
+        city_id = #{cityId, jdbcType=INT}, gender = #{gender, jdbcType=VARCHAR},
+        age = #{age, jdbcType=VARCHAR}, major = #{major, jdbcType=VARCHAR},
+        introduce = #{introduce, jdbcType=VARCHAR}
+    where user_id = #{userId, jdbcType=BIGINT}
+  </update>
+  <delete id="deleteUserInfo" parameterType="UserInfo">
+    delete from user_info where user_id = #{user_id, jdbcType=VARCHAR}
+  </delete>
+</mapper>
