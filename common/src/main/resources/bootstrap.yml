@@ -24,3 +24,7 @@ properties:
       database-name: share_data
       username: root
       password: 970701wxz
+
+service:
+  service-user: http://127.0.0.1:8801
+  service-data: http://127.0.0.1:8802

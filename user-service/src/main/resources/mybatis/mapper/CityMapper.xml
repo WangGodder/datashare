@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.godder.userservice.mapper.CityMapper">
+  <resultMap id="BaseResultMap" type="top.godder.dataapi.entry.City">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="city_id" jdbcType="INTEGER" property="cityId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="province_id" jdbcType="INTEGER" property="provinceId" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+  </resultMap>
+</mapper>

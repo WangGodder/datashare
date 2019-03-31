@@ -31,11 +31,6 @@ public class UserInfo {
     private Integer age;
 
     /**
-     * 专业
-     */
-    private String major;
-
-    /**
      * 自我介绍
      */
     private String introduce;
@@ -138,24 +133,6 @@ public class UserInfo {
      */
     public void setAge(Integer age) {
         this.age = age;
-    }
-
-    /**
-     * 获取专业
-     *
-     * @return major - 专业
-     */
-    public String getMajor() {
-        return major;
-    }
-
-    /**
-     * 设置专业
-     *
-     * @param major 专业
-     */
-    public void setMajor(String major) {
-        this.major = major == null ? null : major.trim();
     }
 
     /**

@@ -11,7 +11,6 @@
     <result column="cityId" jdbcType="INTEGER" property="cityId" />
     <result column="gender" jdbcType="VARCHAR" property="gender" />
     <result column="age" jdbcType="INTEGER" property="age" />
-    <result column="major" jdbcType="VARCHAR" property="major" />
     <result column="introduce" jdbcType="VARCHAR" property="introduce" />
   </resultMap>
   <select id="findUserInfoById" parameterType="java.lang.Long" resultType="UserInfo">
@@ -41,29 +40,25 @@
       <if test="endAge != null">
         and age &lt;= #{endAge}
       </if>
-      <if test="major != null and major != ''">
-        and major = #{major}
-      </if>
     </where>
   </select>
   <insert id="addUserInfo" parameterType="UserInfo">
     insert into
     user_info (
-               user_id, company, province_id, city_id, gender, age, major, introduce
+               user_id, company, province_id, city_id, gender, age, introduce
             )
     values(
            #{user_id, jdbcType=BIGINT}, #{company, jdbcType=VARCHAR},
-           #{provinceId, jdbcType=INT}, #{cityId, jdbcType=INT},
-           #{gender, jdbcType=VARCHAR}, #{age, jdbcType=INT},
-           #{major, jdbcType=VARCHAR}, #{introduce, jdbcType=VARCHAR}
+           #{provinceId, jdbcType=INTEGER}, #{cityId, jdbcType=INTEGER},
+           #{gender, jdbcType=VARCHAR}, #{age, jdbcType=INTEGER},
+           #{introduce, jdbcType=VARCHAR}
                   )
   </insert>
   <update id="updateUserInfo" parameterType="UserInfo">
     update user_info
-    set company = #{company, jdbcType=VARCHAR}, province_id = #{provinceId, jdbcType=INT},
-        city_id = #{cityId, jdbcType=INT}, gender = #{gender, jdbcType=VARCHAR},
-        age = #{age, jdbcType=VARCHAR}, major = #{major, jdbcType=VARCHAR},
-        introduce = #{introduce, jdbcType=VARCHAR}
+    set company = #{company, jdbcType=VARCHAR}, province_id = #{provinceId, jdbcType=INTEGER},
+        city_id = #{cityId, jdbcType=INTEGER}, gender = #{gender, jdbcType=VARCHAR},
+        age = #{age, jdbcType=VARCHAR}, introduce = #{introduce, jdbcType=VARCHAR}
     where user_id = #{userId, jdbcType=BIGINT}
   </update>
   <delete id="deleteUserInfo" parameterType="UserInfo">
