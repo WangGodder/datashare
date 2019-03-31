@@ -11,6 +11,8 @@ public interface UserLocalInfoMapper extends BaseMapper<UserLocalInfo> {
 
     List<UserLocalInfo> findUserLocalInfoByReq(UserLocalInfoReq req);
 
+    boolean addUserLocalInfo(UserLocalInfo userLocalInfo);
+
     boolean updateUserLocalInfo(UserLocalInfo userLocalInfo);
 
     boolean deleteUserLocalInfo(UserLocalInfo userLocalInfo);

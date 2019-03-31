@@ -9,4 +9,36 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="credit" jdbcType="INTEGER" property="credit" />
   </resultMap>
+  <select id="findUserLocalInfoById" parameterType="java.lang.Long" resultType="UserLocalInfo">
+    select * from user_local_info where user_id = #{id};
+  </select>
+  <select id="findUserLocalInfoByReq" parameterType="top.godder.dataapi.request.UserLocalInfoReq" resultType="UserLocalInfo">
+    select * from user_local_info
+    <where>
+      <if test="name != null and name != ''">and name = #{name}</if>
+      <if test="beginCredit != null">and #{beginCredit} &lt;= credit</if>
+      <if test="endCredit != null">and credit &lt;= #{endCredit}</if>
+    </where>
+  </select>
+  <insert id="addUserLocalInfo" parameterType="UserLocalInfo">
+    insert into user_local_info
+    values (
+                   #{userId, jdbcType=BIGINT},
+                   #{name, jdbcType=VARCHAR},
+            <if test="credit != null">#{credit, jdbcType=INTEGER}</if>
+    )
+  </insert>
+  <update id="updateUserLocalInfo" parameterType="UserLocalInfo">
+    update user_local_info
+    <set>
+      <if test="name != null and name != ''">name = #{name, jdbcType=VARCHAR},</if>
+      <if test="credit != null">credit = #{credit, jdbtType=VARCHAR}</if>
+    </set>
+    where user_id = #{userId, jdbcType=BIGINT}
+  </update>
+  <delete id="deleteUserLocalInfo" parameterType="UserLocalInfo">
+    delete
+    from user_local_info
+    where user_id = #{userId, jdbcType=BIGINT};
+  </delete>
 </mapper>
