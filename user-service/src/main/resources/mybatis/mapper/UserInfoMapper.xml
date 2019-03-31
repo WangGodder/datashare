@@ -56,9 +56,14 @@
   </insert>
   <update id="updateUserInfo" parameterType="UserInfo">
     update user_info
-    set company = #{company, jdbcType=VARCHAR}, province_id = #{provinceId, jdbcType=INTEGER},
-        city_id = #{cityId, jdbcType=INTEGER}, gender = #{gender, jdbcType=VARCHAR},
-        age = #{age, jdbcType=VARCHAR}, introduce = #{introduce, jdbcType=VARCHAR}
+    <set>
+      <if test="company != null and company != ''">company = #{company, jdbcType=VARCHAR}</if>
+      <if test="provinceId != null">province_id = #{provinceId, jdbcType=INTEGER}</if>
+      <if test="cityId != null">city_id = #{cityId, jdbcType=INTEGER}</if>
+      <if test="gender != null and gender != ''">gender = #{gender, jdbcType=VARCHAR}</if>
+      <if test="age != null">age = #{age, jdbcType=INTEGER}</if>
+      <if test="introduce != null and introduce != ''">introduce = #{introduce, jdbcType=VARCHAR}</if>
+    </set>
     where user_id = #{userId, jdbcType=BIGINT}
   </update>
   <delete id="deleteUserInfo" parameterType="UserInfo">

@@ -23,4 +23,21 @@ public class UserUrls {
         public static final String ADD_USER_INFO = "/user/addUserInfo";
         public static final String DELETE_USER_INFO = "/user/deleteUserInfo";
     }
+
+    public static class ProvinceApiUrl {
+        public static final String GET_PROVINCE = "/region/province";
+        public static final String GET_ALL_PROVINCE = "/region/allProvince";
+        public static final String ADD_PROVINCE = "/region/addProvince";
+        public static final String UPDATE_PROVINCE = "/region/updateProvince";
+        public static final String DELETE_PROVINCE = "/region/deleteProvince";
+    }
+
+    public static class CityApiUrl {
+        public static final String GET_CITY = "/region/city";
+        public static final String GET_ALL_CITY = "/region/allCity";
+        public static final String GET_CITY_BY_PROVINCE = "/region/cityByProvince";
+        public static final String ADD_CITY = "/region/addCity";
+        public static final String UPDATE_CITY = "/region/updateCity";
+        public static final String DELETE_CITY = "/region/deleteCity";
+    }
 }
