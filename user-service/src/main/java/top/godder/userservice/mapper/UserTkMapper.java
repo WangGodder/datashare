@@ -1,7 +1,7 @@
 package top.godder.userservice.mapper;
 
 import top.godder.common.database.BaseMapper;
-import top.godder.dataapi.entry.UserTk;
+import top.godder.userapi.entry.UserTk;
 
 public interface UserTkMapper extends BaseMapper<UserTk> {
     UserTk findUserTkByUserName(String userName);

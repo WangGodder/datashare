@@ -1,4 +1,4 @@
-package top.godder.dataapi.entry;
+package top.godder.userapi.entry;
 
 import javax.persistence.Id;
 import javax.persistence.Table;

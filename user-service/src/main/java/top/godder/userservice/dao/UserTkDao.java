@@ -1,6 +1,6 @@
 package top.godder.userservice.dao;
 
-import top.godder.dataapi.entry.UserTk;
+import top.godder.userapi.entry.UserTk;
 
 /**
  * @author: godder

@@ -1,4 +1,4 @@
-package top.godder.dataapi.service;
+package top.godder.userapi.service;
 
 /**
  * @author: godder
@@ -8,7 +8,7 @@ package top.godder.dataapi.service;
 /**
  * 用于存放User Api的url地址
  */
-public class UserUrls {
+public class Urls {
     public static class UserTkApiUrl {
         public static final String LOGIN = "/login";
         public static final String REGISTER = "/register";

@@ -36,9 +36,9 @@
     </set>
     where user_id = #{userId, jdbcType=BIGINT}
   </update>
-  <delete id="deleteUserLocalInfo" parameterType="UserLocalInfo">
+  <delete id="deleteUserLocalInfo" parameterType="java.lang.Long">
     delete
     from user_local_info
-    where user_id = #{userId, jdbcType=BIGINT};
+    where user_id = #{id};
   </delete>
 </mapper>

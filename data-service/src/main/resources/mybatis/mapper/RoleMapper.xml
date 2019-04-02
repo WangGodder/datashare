@@ -11,4 +11,26 @@
     <result column="id" jdbcType="CHAR" property="id" />
     <result column="credits" jdbcType="VARCHAR" property="credits" />
   </resultMap>
+    <select id="findRoleById" parameterType="java.lang.Long" resultType="Role">
+        select * from role where role_id = #{id}
+    </select>
+    <select id="findAlllRole" resultType="Role">
+        select * from role
+    </select>
+    <insert id="addRole" parameterType="Role">
+        insert into role (role_name, own_auth, comment)
+        values (#{roleName,jdbcType=VARCHAR}, #{ownAuth,jdbcType=VARCHAR}, #{comment,jdbcType=VARCHAR})
+    </insert>
+    <update id="updateRole" parameterType="Role">
+        update role
+        <set>
+            <if test="roleName != null and roleName != ''">role_name = #{roleName, jdbcType=VARCHAR}</if>
+            <if test="ownAuth != null and ownAuth != ''"> ownAuth = #{ownAuth, jdbcType=VARCHAR}</if>
+            <if test="comment != null">comment = #{comment, jdbcType=VARCHAR}</if>
+        </set>
+        where role_id = #{roleId}
+    </update>
+    <delete id="deleteRole" parameterType="java.lang.Long">
+        delete from role where role_id = #{id}
+    </delete>
 </mapper>

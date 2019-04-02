@@ -33,6 +33,18 @@ public class Question {
     private Long quizUser;
 
     /**
+     * 问题相关领域
+     */
+    @Column(name = "field_id")
+    private Long fieldId;
+
+    /**
+     * 问题相关文件ID，用,分割
+     */
+    @Column(name = "file_id")
+    private String fileId;
+
+    /**
      * @return question_id
      */
     public Long getQuestionId() {
@@ -116,5 +128,41 @@ public class Question {
      */
     public void setQuizUser(Long quizUser) {
         this.quizUser = quizUser;
+    }
+
+    /**
+     * 获取问题相关领域
+     *
+     * @return field_id - 问题相关领域
+     */
+    public Long getFieldId() {
+        return fieldId;
+    }
+
+    /**
+     * 设置问题相关领域
+     *
+     * @param fieldId 问题相关领域
+     */
+    public void setFieldId(Long fieldId) {
+        this.fieldId = fieldId;
+    }
+
+    /**
+     * 获取问题相关文件ID，用,分割
+     *
+     * @return file_id - 问题相关文件ID，用,分割
+     */
+    public String getFileId() {
+        return fileId;
+    }
+
+    /**
+     * 设置问题相关文件ID，用,分割
+     *
+     * @param fileId 问题相关文件ID，用,分割
+     */
+    public void setFileId(String fileId) {
+        this.fileId = fileId == null ? null : fileId.trim();
     }
 }

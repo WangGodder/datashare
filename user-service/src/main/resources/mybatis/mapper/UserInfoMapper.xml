@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="top.godder.userservice.mapper.UserInfoMapper">
-  <resultMap id="BaseResultMap" type="top.godder.dataapi.entry.UserInfo">
+  <resultMap id="BaseResultMap" type="top.godder.userapi.entry.UserInfo">
     <!--
       WARNING - @mbg.generated
     -->
@@ -19,7 +19,7 @@
   <select id="findAllUserInfo" resultType="UserInfo">
     select * from user_info;
   </select>
-  <select id="findUserInfoByReq" parameterType="top.godder.dataapi.request.UserInfoReq" resultType="UserInfo">
+  <select id="findUserInfoByReq" parameterType="top.godder.userapi.request.UserInfoReq" resultType="UserInfo">
     select * from user_info
     <where>
       <if test="company != null and company != ''">
@@ -66,7 +66,7 @@
     </set>
     where user_id = #{userId, jdbcType=BIGINT}
   </update>
-  <delete id="deleteUserInfo" parameterType="UserInfo">
-    delete from user_info where user_id = #{user_id, jdbcType=VARCHAR}
+  <delete id="deleteUserInfo" parameterType="java.lang.Long">
+    delete from user_info where user_id = #{id}
   </delete>
 </mapper>

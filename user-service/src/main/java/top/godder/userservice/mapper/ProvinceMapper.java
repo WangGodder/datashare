@@ -1,7 +1,7 @@
 package top.godder.userservice.mapper;
 
 import top.godder.common.database.BaseMapper;
-import top.godder.dataapi.entry.Province;
+import top.godder.userapi.entry.Province;
 
 import java.util.List;
 

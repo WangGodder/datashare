@@ -1,12 +1,15 @@
-package top.godder.dataservice.mapper;
+package top.godder.dataservice.dao;
 
-import top.godder.common.database.BaseMapper;
 import top.godder.dataapi.entry.UserLocalInfo;
 import top.godder.dataapi.request.UserLocalInfoReq;
 
 import java.util.List;
 
-public interface UserLocalInfoMapper extends BaseMapper<UserLocalInfo> {
+/**
+ * @author: godder
+ * @date: 2019/4/1
+ */
+public interface UserLocalInfoDao {
     UserLocalInfo findUserLocalInfoById(Long id);
 
     List<UserLocalInfo> findUserLocalInfoByReq(UserLocalInfoReq req);

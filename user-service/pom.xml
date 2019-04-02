@@ -111,7 +111,7 @@
         </dependency>
         <dependency>
             <groupId>top.godder</groupId>
-            <artifactId>data-api</artifactId>
+            <artifactId>user-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

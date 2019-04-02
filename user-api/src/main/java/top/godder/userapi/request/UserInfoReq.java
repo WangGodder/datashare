@@ -1,4 +1,4 @@
-package top.godder.dataapi.request;
+package top.godder.userapi.request;
 
 import lombok.Getter;
 import lombok.Setter;

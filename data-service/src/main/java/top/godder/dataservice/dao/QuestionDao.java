@@ -1,12 +1,15 @@
-package top.godder.dataservice.mapper;
+package top.godder.dataservice.dao;
 
-import top.godder.common.database.BaseMapper;
 import top.godder.dataapi.entry.Question;
 import top.godder.dataapi.request.QuestionReq;
 
 import java.util.List;
 
-public interface QuestionMapper extends BaseMapper<Question> {
+/**
+ * @author: godder
+ * @date: 2019/4/2
+ */
+public interface QuestionDao {
     Question findQuestionById(Long id);
 
     List<Question> findAllQuestionById();

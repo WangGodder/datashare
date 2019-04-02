@@ -25,6 +25,7 @@
     <!--父项目包含的子模块-->
     <modules>
         <module>common</module>
+        <module>user-api</module>
         <module>data-api</module>
         <module>eureka-service</module>
         <module>user-service</module>

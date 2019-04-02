@@ -1,8 +1,8 @@
 package top.godder.userservice.mapper;
 
 import top.godder.common.database.BaseMapper;
-import top.godder.dataapi.entry.UserInfo;
-import top.godder.dataapi.request.UserInfoReq;
+import top.godder.userapi.entry.UserInfo;
+import top.godder.userapi.request.UserInfoReq;
 
 import java.util.List;
 
@@ -17,5 +17,5 @@ public interface UserInfoMapper extends BaseMapper<UserInfo> {
 
     boolean updateUserInfo(UserInfo userInfo);
 
-    boolean deleteUserInfo(UserInfo userInfo);
+    boolean deleteUserInfo(Long id);
 }
