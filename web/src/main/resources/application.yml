@@ -10,4 +10,4 @@ spring:
     content-type: text/html; charset=UTF-8
     suffix: .html
   resources:
-    static-locations: classpath:static/
+    static-locations: classpath:/static/, classpath:/templates/

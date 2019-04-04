@@ -18,6 +18,9 @@ public interface UserInfoApi {
     @RequestMapping(value = Urls.UserInfoApiUrl.GET_USER_INFO, method = GET)
     UserInfo getUserInfo(@RequestBody Long id);
 
+    @RequestMapping(value = Urls.UserInfoApiUrl.GET_ALL_USER_INFO, method = GET)
+    List<UserInfo> getAllUserInfo();
+
     @RequestMapping(value = Urls.UserInfoApiUrl.REQ_USER_INFO, method = GET)
     List<UserInfo> requestUserInfo(@RequestBody UserInfoReq req);
 

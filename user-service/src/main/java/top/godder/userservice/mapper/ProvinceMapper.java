@@ -12,7 +12,7 @@ public interface ProvinceMapper extends BaseMapper<Province> {
 
     boolean addProvince(Province province);
 
-    boolean updateProvince(Province province);
+    Integer updateProvince(Province province);
 
-    boolean deleteProvince(Integer id);
+    Integer deleteProvince(Integer id);
 }

@@ -39,12 +39,12 @@ public class UserInfoDaoImpl implements UserInfoDao {
     }
 
     @Override
-    public boolean updateUserInfo(UserInfo userInfo) {
+    public Integer updateUserInfo(UserInfo userInfo) {
         return mapper.updateUserInfo(userInfo);
     }
 
     @Override
-    public boolean deleteUserInfo(Long id) {
+    public Integer deleteUserInfo(Long id) {
         return mapper.deleteUserInfo(id);
     }
 }

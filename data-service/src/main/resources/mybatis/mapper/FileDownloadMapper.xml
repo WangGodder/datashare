@@ -9,4 +9,16 @@
     <result column="download_user" jdbcType="BIGINT" property="downloadUser" />
     <result column="download_time" jdbcType="TIMESTAMP" property="downloadTime" />
   </resultMap>
+    <select id="findFileDownloadByFile" parameterType="java.lang.Long" resultType="FileDownload">
+        select * from file_download where file_id = #{id}
+    </select>
+    <select id="findFileDownloadByUser" parameterType="java.lang.Long" resultType="FileDownload">
+        select * from file_download where download_user = #{id}
+    </select>
+    <select id="findAllFileDownload" resultType="FileDownload">
+        select * from file_download
+    </select>
+    <insert id="addFileDownload" parameterType="FileDownload">
+        insert into file_download (file_id, download_user) VALUES (#{fileId}, #{downloadUser})
+    </insert>
 </mapper>

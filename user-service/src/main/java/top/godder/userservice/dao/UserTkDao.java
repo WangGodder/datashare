@@ -11,7 +11,7 @@ public interface UserTkDao {
 
     boolean addUserTk(UserTk userTk);
 
-    boolean updateUserTk(UserTk userTk);
+    Integer updateUserTk(UserTk userTk);
 
-    boolean deleteUserTk(UserTk userTk);
+    Integer deleteUserTk(UserTk userTk);
 }

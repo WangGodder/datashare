@@ -18,7 +18,7 @@ public interface UserInfoDao {
 
     boolean addUserInfo(UserInfo userInfo);
 
-    boolean updateUserInfo(UserInfo userInfo);
+    Integer updateUserInfo(UserInfo userInfo);
 
-    boolean deleteUserInfo(Long id);
+    Integer deleteUserInfo(Long id);
 }

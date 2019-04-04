@@ -3,10 +3,10 @@ package top.godder.dataapi.entry;
 import javax.persistence.Column;
 import javax.persistence.Table;
 
-@Table(name = "question_evaluate")
-public class QuestionEvaluate {
-    @Column(name = "question_id")
-    private Long questionId;
+@Table(name = "answer_evaluate")
+public class AnswerEvaluate {
+    @Column(name = "answer_id")
+    private Long answerId;
 
     @Column(name = "user_id")
     private Long userId;
@@ -20,15 +20,15 @@ public class QuestionEvaluate {
     /**
      * @return question_id
      */
-    public Long getQuestionId() {
-        return questionId;
+    public Long getAnswerId() {
+        return answerId;
     }
 
     /**
-     * @param questionId
+     * @param answerId
      */
-    public void setQuestionId(Long questionId) {
-        this.questionId = questionId;
+    public void setAnswerId(Long answerId) {
+        this.answerId = answerId;
     }
 
     /**

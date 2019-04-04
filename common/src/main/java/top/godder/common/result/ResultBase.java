@@ -11,8 +11,8 @@ import lombok.Setter;
  */
 public abstract class ResultBase {
 
-    public static int SUCCESS = 1; //成功
-    public static int FAILURE = 0; //失败
+    public static int SUCCESS = 0; //成功
+    public static int FAILURE = 1; //失败
 
     public ResultBase() {
         this.status = FAILURE;

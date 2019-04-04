@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="top.godder.dataservice.mapper.QuestionMapper">
-  <resultMap id="BaseResultMap" type="top.godder.datashare.domain.Question">
+  <resultMap id="BaseResultMap" type="top.godder.dataapi.entry.Question">
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="question_id" jdbcType="BIGINT" property="questionId" />
+    <id column="question_id" jdbcType="BIGINT" property="answerId" />
     <result column="question_name" jdbcType="VARCHAR" property="questionName" />
     <result column="question_description" jdbcType="VARCHAR" property="questionDescription" />
     <result column="question_credit" jdbcType="INTEGER" property="questionCredit" />
@@ -58,7 +58,7 @@
                 file_id = #{fileId,jdbcType=VARCHAR},
             </if>
         </set>
-        where question_id = #{questionId, jdbcType=BIGINT}
+        where question_id = #{answerId, jdbcType=BIGINT}
     </update>
     <delete id="deleteQuestion" parameterType="java.lang.Long">
         delete from question where question_id = #{id}

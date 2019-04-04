@@ -8,7 +8,6 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>top.godder</groupId>
     <artifactId>common</artifactId>
     <version>0.0.1</version>
     <name>common</name>
@@ -38,10 +37,10 @@
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
         <!--spring AMQP解决方案 配合MQ-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-amqp</artifactId>-->
+        <!--</dependency>-->
         <!--redis spring集成-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,12 +50,12 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
         </dependency>
-        <!--mybatis springboot 整合-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.3.1</version>
-        </dependency>
+        <!--&lt;!&ndash;mybatis springboot 整合&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.mybatis.spring.boot</groupId>-->
+            <!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
+            <!--<version>1.3.1</version>-->
+        <!--</dependency>-->
         <!--alibaba druid 数据库管理工具-->
         <dependency>
             <groupId>com.alibaba</groupId>

@@ -46,4 +46,17 @@ public class JsonResult extends ResultBase {
         return jsonResult;
     }
 
+    public static JsonResult fail(ErrorResult errorResult) {
+        JsonResult jsonResult = new JsonResult();
+        jsonResult.setStatus(errorResult.getCode());
+        jsonResult.setMessage(errorResult.getMessage());
+        return jsonResult;
+    }
+
+    public static JsonResult fail(ErrorResult errorResult, Object data) {
+        JsonResult jsonResult = fail(errorResult);
+        jsonResult.setData(data);
+        return jsonResult;
+    }
+
 }

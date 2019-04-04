@@ -8,7 +8,7 @@ public interface UserTkMapper extends BaseMapper<UserTk> {
 
     boolean addUserTk(UserTk userTk);
 
-    boolean updateUserTk(UserTk userTk);
+    Integer updateUserTk(UserTk userTk);
 
-    boolean deleteUserTk(UserTk userTk);
+    Integer deleteUserTk(UserTk userTk);
 }

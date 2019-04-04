@@ -18,6 +18,7 @@ public class Urls {
 
     public static class UserInfoApiUrl {
         public static final String GET_USER_INFO = "/user/userInfo";
+        public static final String GET_ALL_USER_INFO = "/user/allUserInfo";
         public static final String REQ_USER_INFO = "/user/userInfoReq";
         public static final String UPDATE_USER_INFO = "/user/updateUserInfo";
         public static final String ADD_USER_INFO = "/user/addUserInfo";

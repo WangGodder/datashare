@@ -7,6 +7,9 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8800/eureka/
 
+security:
+  basic:
+    enabled: false
 
 #----------------------------------------------------------------------------
 # 配置参数

@@ -26,12 +26,12 @@ public class UserTkDaoImpl implements UserTkDao {
     }
 
     @Override
-    public boolean updateUserTk(UserTk userTk) {
+    public Integer updateUserTk(UserTk userTk) {
         return mapper.updateUserTk(userTk);
     }
 
     @Override
-    public boolean deleteUserTk(UserTk userTk) {
-        return false;
+    public Integer deleteUserTk(UserTk userTk) {
+        return mapper.deleteUserTk(userTk);
     }
 }

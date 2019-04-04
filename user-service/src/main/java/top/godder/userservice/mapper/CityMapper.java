@@ -12,9 +12,9 @@ public interface CityMapper extends BaseMapper<City> {
 
     List<City> findCityByProvinceId(Integer provinceId);
 
-    boolean updateCity(City city);
+    Integer updateCity(City city);
 
     boolean addCity(City city);
 
-    boolean deleteCity(Integer id);
+    Integer deleteCity(Integer id);
 }

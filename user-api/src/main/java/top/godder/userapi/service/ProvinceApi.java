@@ -13,7 +13,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
  * @author: godder
  * @date: 2019/4/1
  */
-@FeignClient(value = "user-service", url = "${service.user-service}")
+@FeignClient(value = "service-user", url = "${service.service-user}")
 public interface ProvinceApi {
     @RequestMapping(value = Urls.ProvinceApiUrl.GET_PROVINCE, method = GET)
     Province findProvinceById(@RequestBody Integer id);

@@ -13,7 +13,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
  * @author: godder
  * @date: 2019/4/1
  */
-@FeignClient(value = "user-service", url = "${service.service-user}")
+@FeignClient(value = "service-user", url = "${service.service-user}")
 public interface CityApi {
     @RequestMapping(value = Urls.CityApiUrl.GET_CITY, method = GET)
     City findCityById(Integer id);
